@@ -1,10 +1,10 @@
-package com.terrace.server.impl;
+package com.terrace.service.impl;
 
 import com.terrace.domain.RedisUtil;
 import com.terrace.domain.ResultMsg;
 import com.terrace.domain.TerraceVO;
 import com.terrace.mapper.TerraceMapper;
-import com.terrace.server.TerraceServer;
+import com.terrace.service.TerraceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,7 +16,7 @@ import java.util.List;
  * @date 2019/7/16
  */
 @Service
-public class TerraceServerImpl implements TerraceServer {
+public class TerraceServiceImpl implements TerraceService {
     @Autowired
     private TerraceMapper terraceMapper;
 
