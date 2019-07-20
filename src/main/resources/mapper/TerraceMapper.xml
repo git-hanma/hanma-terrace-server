@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace 定义如何找到这个mapper -->
+<mapper namespace="com.terrace.mapper.TerraceMapper">
+	<!-- 查询  -->
+	<select id="userListYh" resultType="com.terrace.domain.TerraceVO">
+		select * from t_staff
+	</select>
+
+	<!-- 查询员工  -->
+	<select id="userYg" resultType="com.terrace.domain.TerraceVO">
+		select * from t_staff
+	</select>
+
+	<!--根据用户名获取-->
+	<select id="LogonBy" parameterType="java.lang.String" resultType="com.terrace.domain.TerraceVO">
+		select
+		*
+		from t_staff
+		where staff_phone = #{staffPhone}
+	</select>
+
+</mapper>
